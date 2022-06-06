@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>jquery</title>
+<script type="text/javascript" src="jquery/jquerylal.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+   $("#fo").click(function(){
+$("#k").fadeOut(5000);
+
+}) 
+$("#fin").click(function(){
+$("#k").fadeIn(5000);
+})
+$("#ftoggle").click(function(){
+$("#k").fadeToggle(5000,function(){
+$("#ftoggle").text("fadeto complted");  
+});
+})  
+
+$("#fto").click(function(){
+$("#k").fadeTo(5000,0.5,function(){
+$("#fto").text("fadeto complted"); 
+
+});
+})
+
+$("#su").click(function(){
+$("#m").slideUp(5000);
+})
+$("#sd").click(function(){
+$("#m").slideDown(5000);
+})
+$("#stoggle").click(function(){
+$("#m ").slideToggle(5000);
+})
+
+$("#mr").click(function(){
+$("#n").animate( {left:500,width:150,height:150,opacity:0.5},5000);
+})
+
+$("#ml").click(function(){
+$("#n").animate({left:0,width:150,height:150,opacity:1.0 },5000);
+})
+$("#mt").click(function(){
+var b=$("#l ");
+b.animate({left:300},3000);
+b.animate({top:300},5000);
+b.animate({left:0,top:300},4000);
+b.animate({left:0,top:0},5000);
+})
+  
+});
+ 
+
+</script>
+</head>
+<body>
+	
+     <button id="fo">fadeout</button>
+<button id="fin">fadein</button>
+<button id="ftoggle">fadetoggle</button>
+<button id="fto">fadeto</button><br><br>
+<button id="su">slideUp</button>
+<button id="sd">slideDown</button>
+<button id="stoggle">slidetoggle</button>
+<br><br>
+<button id="ml">moveleft</button>
+ 
+<button id="mr">moveright</button>
+
+<button id="mt">movetoggle</button><br><br>
+
+
+
+<div id="k" style="background-color:red; width:200px; height:150px; ">
+</div><br>
+<div id="m" style="background-color:yellow; width:200px; height:150px; ">
+</div><br><br>
+<div id="n" style="background-color:green; width:200px; height:150px; position:relative;">
+</div><br>
+
+<div id="l" style="background-color:pink; width:200px; height:150px; position:relative;">
+</div><br>
+ 
+</body>
+</html>
